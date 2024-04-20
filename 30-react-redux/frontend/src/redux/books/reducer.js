@@ -1,14 +1,14 @@
-import * as a from './actionTypes'
+import * as a from './actionTypes';
 
-const initialState = []
+const initialState = [];
 
-const booksRecuder = (state = initialState, action) => {
+const booksReducer = (state = initialState, action) => {
     switch (action.type) {
         case a.ADD_BOOK:
-
-            break;
-
+            return [...state, action.payload];
         default:
-            break;
+            return state;
     }
-}
+};
+
+export default booksReducer;
